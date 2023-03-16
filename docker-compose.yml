@@ -1,0 +1,49 @@
+#Se crea el contenedor
+version: "2.4"
+services:
+  #Base de datos
+  postgres:
+    image: postgres:15
+    mem_limit: 1024m
+    ports:
+      - "5432:5432"
+    networks:
+      - mynet
+    environment:
+      POSTGRES_PASSWORD: password
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      #windows
+      #- C:/Users/Nao/Desktop/postgres-arqui-2:/var/lib/postgresql/data
+      #Linux
+      #- /nao/Desktop/postgres-arqui-2:/var/lib/postgresql/data
+      - ${VOLUME_PATH}
+  #Mi hostname
+  currency-converter: 
+    image: spring-boot-docker:spring-docker
+    #Reinicio hasta que postgres funcione
+    restart: always
+    ports:
+      - "8080:8080"
+    networks:
+      - mynet
+    environment:
+      URL: "${POSTGRES_URL}"
+      API_KEY: "${API_KEY}"
+      USERNAME_DB: "${USERNAME_DB}"
+      PASSWORD: "${PASSWORD}"
+    depends_on:
+      - postgres
+  # Para angular
+  angular:
+    image: angular-software:4.0.0-docker
+    ports:
+      - "4200:80"
+    networks:
+      - mynet
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+
+networks:
+  mynet:
+    external: true

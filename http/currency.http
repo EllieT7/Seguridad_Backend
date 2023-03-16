@@ -1,0 +1,33 @@
+###
+##Mandamos una petición GET a la API para obtener la conversion de monedas
+  
+GET http://localhost:8080/api/currency/convert?to=eur&from=usd&amount=55
+
+###
+##Prueba con error de moneda
+
+
+
+GET http://localhost:8080/api/currency/convert?to=usd&from=bobs&amount=1000
+
+###
+##Prueba con monto menor a 0
+
+GET http://localhost:8080/api/currency/convert?to=usd&from=bob&amount=-1000
+
+
+### 
+##Prueba para obtener el historial de conversiones
+
+GET http://localhost:8080/api/currency/history?page=1&size=5
+
+
+###
+##Prueba para obtener el historial de conversiones con filtro de moneda origen
+
+GET http://localhost:8080/api/currency/history?page=0&size=5&from=eur
+
+###
+##Prueba para obtener el historial de conversiones con filtro de fecha
+
+GET http://localhost:8080/api/currency/history?page=0&size=5&date=2022-02-12

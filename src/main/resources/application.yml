@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    type: org.postgresql.jdbc2.optional.SimpleDataSource
+    #username: postgres
+    #password: password
+    #url: jdbc:postgresql://127.0.1.1:5432/arqui
+    username: ${USERNAME_DB:postgres}
+    password: ${PASSWORD:password}
+    url: ${URL:jdbc:postgresql://127.0.1.1:5432/arqui}
+  
+  jpa:
+    hibernate:
+      ddl-auto: update 
+      # Para crear una entidad si es que no existe en la bd
+
+  application:
+    name: currency-converter
