@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.security.access.prepost.PreAuthorize
 import java.math.BigDecimal
 import java.util.logging.Level
 import java.util.logging.Logger
 import java.util.Date
+import java.security.Principal
 
 @RestController
 @RequestMapping("/api/currency")
@@ -34,6 +36,26 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
             "Procesando solicitud de conversion de moneda: ${requestDto.amount} ${requestDto.from}  a ${requestDto.to}"
         )
         return currencyBl.convert(requestDto)
+    }
+
+    @GetMapping("/user")
+    @PreAuthorize("hasAuthority('ROLE_USER')")
+    fun user(): String{
+        LOGGER.log(Level.INFO, "Procesando solicitud de usuario")
+        return "ROLE_USER"
+    }
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    fun admin(): String{
+        LOGGER.log(Level.INFO, "Procesando solicitud de administrador")
+        return "ROLE_ADMIN"
+    }
+
+    //Principal tiene informacion del usuario
+    @GetMapping("/principal")
+    fun info(principal: Principal): String{
+        return principal.toString()
     }
 
     /** 

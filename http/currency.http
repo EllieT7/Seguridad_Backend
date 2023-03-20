@@ -31,3 +31,21 @@ GET http://localhost:8080/api/currency/history?page=0&size=5&from=eur
 ##Prueba para obtener el historial de conversiones con filtro de fecha
 
 GET http://localhost:8080/api/currency/history?page=0&size=5&date=2022-02-12
+
+
+### user
+
+GET http://localhost:8080/api/currency/user
+Authorization: Basic
+    @GetMapping("/user")
+    @PreAu user user
+
+### admin
+
+GET http://localhost:8080/api/currency/admin
+Authorization: Basic admin admin
+
+### informacion del usuario
+
+GET http://localhost:8080/api/currency/principal
+Authorization: Basic admin admin
