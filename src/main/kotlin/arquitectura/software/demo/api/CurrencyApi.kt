@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
-import org.springframework.security.access.prepost.PreAuthorize
+// import org.springframework.security.access.prepost.PreAuthorize
 import java.math.BigDecimal
 import java.util.logging.Level
 import java.util.logging.Logger
@@ -38,25 +38,25 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         return currencyBl.convert(requestDto)
     }
 
-    @GetMapping("/user")
-    @PreAuthorize("hasAuthority('ROLE_USER')")
-    fun user(): String{
-        LOGGER.log(Level.INFO, "Procesando solicitud de usuario")
-        return "ROLE_USER"
-    }
+    // @GetMapping("/user")
+    // @PreAuthorize("hasAuthority('ROLE_USER')")
+    // fun user(): String{
+    //     LOGGER.log(Level.INFO, "Procesando solicitud de usuario")
+    //     return "ROLE_USER"
+    // }
 
-    @GetMapping("/admin")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
-    fun admin(): String{
-        LOGGER.log(Level.INFO, "Procesando solicitud de administrador")
-        return "ROLE_ADMIN"
-    }
+    // @GetMapping("/admin")
+    // @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    // fun admin(): String{
+    //     LOGGER.log(Level.INFO, "Procesando solicitud de administrador")
+    //     return "ROLE_ADMIN"
+    // }
 
-    //Principal tiene informacion del usuario
-    @GetMapping("/principal")
-    fun info(principal: Principal): String{
-        return principal.toString()
-    }
+    // //Principal tiene informacion del usuario
+    // @GetMapping("/principal")
+    // fun info(principal: Principal): String{
+    //     return principal.toString()
+    // }
 
     /** 
      * Endpoint GET para obtener el historial de conversiones

@@ -17,3 +17,28 @@ spring:
 
   application:
     name: currency-converter
+
+# Configuramos springboot con keycloak
+keycloak:
+  realm: software
+  auth-server-url: http://localhost:8008
+  ssl-required: external
+  resource: backend
+  credentials:
+    secret: bJ0drlN5kdWjBSJLRi6p0bd5xM5Qy7su
+  use-resource-role-mappings: false
+  security-constraints:
+    - authRoles:
+        - ADMIN
+      security-collections:
+        - name: SERVICIOS DEL ADMINISTRADOR
+          patterns:
+            - /api/currency/history
+  # security-constraints[1]:
+    - authRoles:
+        - USER
+      security-collections:
+        - name: SERVICIOS DEL USUARIO
+          patterns:
+            - /api/currency/convert 
+            
