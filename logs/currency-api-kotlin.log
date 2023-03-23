@@ -495,3 +495,204 @@ Update your application's configuration
 2023-03-20 21:05:52,420 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-7] Respuesta de la API: ResponseDto(success=true, query=QueryDto(from=USD, to=EUR, amount=55), date=2023-03-21, result=51.3172)
 2023-03-20 21:05:52,552 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-7] Respuesta guardada en bd correctamente
 2023-03-20 21:08:36,915 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:21:48,606 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 8628 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 03:21:48,618 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 03:21:50,599 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 03:21:50,785 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 130 ms. Found 2 JPA repository interfaces.
+2023-03-23 03:21:52,012 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tomcatServletWebServerFactory' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/ServletWebServerFactoryConfiguration$EmbeddedTomcat.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory]: Factory method 'tomcatServletWebServerFactory' threw exception; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.keycloak.adapters.springboot.KeycloakAutoConfiguration': Unsatisfied dependency expressed through method 'setKeycloakSpringBootProperties' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'keycloak-org.keycloak.adapters.springboot.KeycloakSpringBootProperties': Could not bind properties to 'KeycloakSpringBootProperties' : prefix=keycloak, ignoreInvalidFields=false, ignoreUnknownFields=false; nested exception is org.springframework.boot.context.properties.bind.BindException: Failed to bind properties under 'keycloak' to org.keycloak.adapters.springboot.KeycloakSpringBootProperties
+2023-03-23 03:21:52,041 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-23 03:21:52,096 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [main] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Binding to target [Bindable@24a86066 type = org.keycloak.adapters.springboot.KeycloakSpringBootProperties, value = 'provided', annotations = array<Annotation>[@org.springframework.boot.context.properties.ConfigurationProperties(ignoreInvalidFields=false, ignoreUnknownFields=false, prefix="keycloak", value="keycloak")]] failed:
+
+    Property: keycloak.security-constraints[0].security-collections[0].ommited-methods[0]
+    Value: "OPTIONS"
+    Origin: class path resource [application.yml] - 36:15
+    Reason: The elements [keycloak.security-constraints[0].security-collections[0].ommited-methods[0]] were left unbound.
+
+Action:
+
+Update your application's configuration
+
+2023-03-23 03:22:57,370 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 15116 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 03:22:57,377 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 03:22:58,777 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 03:22:58,927 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 85 ms. Found 2 JPA repository interfaces.
+2023-03-23 03:23:00,572 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-03-23 03:23:00,599 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:23:00,602 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-03-23 03:23:00,604 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-23 03:23:00,795 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-03-23 03:23:00,796 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3265 ms
+2023-03-23 03:23:01,324 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-23 03:23:01,450 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-23 03:23:01,823 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-23 03:23:02,715 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-23 03:23:03,570 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-23 03:23:03,587 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:23:06,418 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-23 03:23:08,983 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:23:09,034 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-23 03:23:09,051 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 12.981 seconds (JVM running for 13.668)
+2023-03-23 03:28:21,183 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-23 03:28:21,186 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-03-23 03:28:21,189 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-03-23 03:30:06,135 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-5] Loaded URLs from http://localhost:8008/realms/software/.well-known/openid-configuration
+2023-03-23 03:31:41,837 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:32:59,978 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 12228 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 03:32:59,985 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 03:33:01,215 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 03:33:01,307 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 70 ms. Found 2 JPA repository interfaces.
+2023-03-23 03:33:02,462 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-03-23 03:33:02,488 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:33:02,490 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-03-23 03:33:02,492 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-23 03:33:02,654 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-03-23 03:33:02,655 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2530 ms
+2023-03-23 03:33:02,838 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-03-23 03:33:03,072 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-23 03:33:03,212 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-23 03:33:03,545 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-23 03:33:03,968 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-23 03:33:04,775 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-23 03:33:04,791 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:33:05,990 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-23 03:33:07,130 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:33:07,180 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-23 03:33:07,204 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 8.221 seconds (JVM running for 8.872)
+2023-03-23 03:33:36,410 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-1] Loaded URLs from http://localhost:8008/realms/software/.well-known/openid-configuration
+2023-03-23 03:37:03,473 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:37:38,301 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 14624 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 03:37:38,306 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 03:37:40,345 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 03:37:40,454 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2023-03-23 03:37:41,788 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-03-23 03:37:41,833 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:37:41,836 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-03-23 03:37:41,837 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-23 03:37:42,003 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-03-23 03:37:42,004 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3606 ms
+2023-03-23 03:37:42,362 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] only the HTTP methods [GET] are covered. All other methods are uncovered.
+2023-03-23 03:37:42,586 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-23 03:37:42,688 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-23 03:37:42,993 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-23 03:37:43,505 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-23 03:37:44,568 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-23 03:37:44,582 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:37:46,091 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-23 03:37:47,348 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:37:47,402 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-23 03:37:47,429 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 10.033 seconds (JVM running for 10.843)
+2023-03-23 03:37:53,530 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-23 03:37:53,531 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-03-23 03:37:53,533 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2023-03-23 03:37:54,039 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-2] Loaded URLs from http://localhost:8008/realms/software/.well-known/openid-configuration
+2023-03-23 03:38:23,933 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:39:38,003 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 5752 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 03:39:38,013 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 03:39:39,734 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 03:39:39,900 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 131 ms. Found 2 JPA repository interfaces.
+2023-03-23 03:39:41,726 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-03-23 03:39:41,741 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:39:41,743 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-03-23 03:39:41,744 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-23 03:39:41,889 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-03-23 03:39:41,890 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3771 ms
+2023-03-23 03:39:42,136 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-03-23 03:39:42,139 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-03-23 03:39:42,375 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-23 03:39:42,478 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-23 03:39:42,731 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-23 03:39:43,115 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-23 03:39:43,802 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-23 03:39:43,818 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 03:39:45,357 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-23 03:39:47,162 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-23 03:39:47,213 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-23 03:39:47,231 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 10.146 seconds (JVM running for 10.799)
+2023-03-23 03:39:50,887 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-23 03:39:50,889 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-03-23 03:39:50,892 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2023-03-23 03:39:51,425 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-2] Loaded URLs from http://localhost:8008/realms/software/.well-known/openid-configuration
+2023-03-23 03:41:26,008 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-5] Procesando solicitud de conversion de moneda: 12 bob  a usd
+2023-03-23 03:41:26,010 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Convirtiendo 12 bob a usd
+2023-03-23 03:41:27,538 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Respuesta de la API: ResponseDto(success=true, query=QueryDto(from=BOB, to=USD, amount=12), date=2023-03-23, result=1.73136)
+2023-03-23 03:41:27,687 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Respuesta guardada en bd correctamente
+2023-03-23 03:46:17,796 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-10] Procesando solicitud de conversion de moneda: 12 bob  a usd
+2023-03-23 03:46:17,800 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-10] Convirtiendo 12 bob a usd
+2023-03-23 03:46:18,407 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-10] Respuesta de la API: ResponseDto(success=true, query=QueryDto(from=BOB, to=USD, amount=12), date=2023-03-23, result=1.73136)
+2023-03-23 03:46:18,460 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-10] Respuesta guardada en bd correctamente
+2023-03-23 04:30:17,600 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 05:13:45,973 INFO org.springframework.boot.StartupInfoLogger [main] Starting CurrencyApiKotlinApplicationKt using Java 17.0.6 on DESKTOP-B6VGA76 with PID 13172 (D:\Documents\Proyectos\Seguridad\Seguridad_Backed\target\classes started by Nao in D:\Documents\Proyectos\Seguridad\Seguridad_Backed)
+2023-03-23 05:13:45,990 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-03-23 05:13:47,411 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-23 05:13:47,528 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2023-03-23 05:13:49,335 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-03-23 05:13:49,355 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-23 05:13:49,357 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-03-23 05:13:49,358 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-23 05:13:49,580 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-03-23 05:13:49,582 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3471 ms
+2023-03-23 05:13:49,837 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-03-23 05:13:49,838 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-03-23 05:13:50,077 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-23 05:13:50,201 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-03-23 05:13:50,513 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-23 05:13:51,579 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-23 05:13:53,189 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-23 05:13:53,203 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-23 05:13:54,460 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-23 05:13:55,865 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-23 05:13:55,905 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-23 05:13:55,920 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 10.913 seconds (JVM running for 11.694)
+2023-03-23 05:14:17,705 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-23 05:14:17,707 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-03-23 05:14:17,712 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-2] Completed initialization in 3 ms
+2023-03-23 05:14:18,228 INFO org.keycloak.adapters.KeycloakDeployment [http-nio-8080-exec-1] Loaded URLs from http://localhost:8008/realms/software/.well-known/openid-configuration
+2023-03-23 05:14:18,378 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-1] Procesando solicitud de conversion de moneda: 122 bob  a usd
+2023-03-23 05:14:18,381 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Convirtiendo 122 bob a usd
+2023-03-23 05:14:28,944 WARN arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Error al invocar la API
+2023-03-23 05:14:44,635 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-5] Procesando solicitud de conversion de moneda: 122 bob  a usd
+2023-03-23 05:14:44,636 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Convirtiendo 122 bob a usd
+2023-03-23 05:14:54,799 WARN arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Error al invocar la API
+2023-03-23 05:15:01,318 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-7] Procesando solicitud de conversion de moneda: 122 bob  a usd
+2023-03-23 05:15:01,321 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-7] Convirtiendo 122 bob a usd
+2023-03-23 05:15:11,537 WARN arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-7] Error al invocar la API
+2023-03-23 05:16:04,179 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-6] Procesando solicitud de historial de conversiones
+2023-03-23 05:16:04,184 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-6] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:16:10,604 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-10] Procesando solicitud de historial de conversiones
+2023-03-23 05:16:10,605 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-10] Obteniendo historial de conversiones: page=1, size=5, filter={}
+2023-03-23 05:16:13,761 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-1] Procesando solicitud de historial de conversiones
+2023-03-23 05:16:13,762 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:16:20,131 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-5] Procesando solicitud de historial de conversiones
+2023-03-23 05:16:20,132 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-5] Obteniendo historial de conversiones: page=1, size=5, filter={}
+2023-03-23 05:16:21,251 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-7] Procesando solicitud de historial de conversiones
+2023-03-23 05:16:21,253 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-7] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:17:00,720 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-9] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:00,721 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-9] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:17:13,721 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-1] Procesando solicitud de conversion de moneda: 84 bob  a usd
+2023-03-23 05:17:13,722 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Convirtiendo 84 bob a usd
+2023-03-23 05:17:14,387 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Respuesta de la API: ResponseDto(success=true, query=QueryDto(from=BOB, to=USD, amount=84), date=2023-03-23, result=12.11952)
+2023-03-23 05:17:14,600 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-1] Respuesta guardada en bd correctamente
+2023-03-23 05:17:17,192 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-3] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:17,193 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-3] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:17:20,739 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-8] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:20,740 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-8] Obteniendo historial de conversiones: page=1, size=5, filter={}
+2023-03-23 05:17:23,694 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-9] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:23,696 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-9] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:17:26,774 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-2] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:26,775 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-2] Obteniendo historial de conversiones: page=0, size=5, filter={from=usd}
+2023-03-23 05:17:28,948 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-4] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:28,949 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-4] Obteniendo historial de conversiones: page=0, size=5, filter={from=undefined}
+2023-03-23 05:17:37,374 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-8080-exec-3] Procesando solicitud de historial de conversiones
+2023-03-23 05:17:37,375 INFO arquitectura.software.demo.bl.CurrencyBl [http-nio-8080-exec-3] Obteniendo historial de conversiones: page=0, size=5, filter={}
+2023-03-23 05:18:22,136 ERROR org.keycloak.adapters.rotation.AdapterTokenVerifier [http-nio-8080-exec-6] Didn't find publicKey for kid: 2kk90TZMB5t3Xqiu3rMtBhYomFJVQumppiy0a-ahUbw
+2023-03-23 05:20:16,173 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'

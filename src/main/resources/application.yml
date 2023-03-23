@@ -32,6 +32,8 @@ keycloak:
         - ADMIN
       security-collections:
         - name: SERVICIOS DEL ADMINISTRADOR
+          omitted-methods: 
+            - OPTIONS
           patterns:
             - /api/currency/history
   # security-constraints[1]:
@@ -39,6 +41,8 @@ keycloak:
         - USER
       security-collections:
         - name: SERVICIOS DEL USUARIO
+          omitted-methods: 
+            - OPTIONS
           patterns:
             - /api/currency/convert 
             
