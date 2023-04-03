@@ -72,4 +72,8 @@ class CurrencyBl @Autowired constructor(private val pagingRepository: PagingRepo
         }
         return list;
     }
+
+    fun totalRecords(): Long {
+        return pagingRepository.count()
+    }
 }

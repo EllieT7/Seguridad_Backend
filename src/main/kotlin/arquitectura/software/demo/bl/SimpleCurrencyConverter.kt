@@ -24,31 +24,16 @@ import java.math.BigDecimal
 import java.util.*
 import java.util.logging.Level
 import java.util.logging.Logger
+import kotlinx.coroutines.*
 
-
-
-// @ComponentScan("com")
-//@Component
 class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
-
-
-    // var context: ApplicationContext? = AnnotationConfigApplicationContext(Data::class.java)
-
-
-   //@Autowired
-   //lateinit var currencyRepository: CurrencyRepository
-
-     // var currencyRepository: CurrencyRepository = context?.getBean(CurrencyRepository::class.java)!!;
-    //var currencyRepository = getInstanceOfCurrencyRepository()    //var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
-    //Declaramos la url de la api
-    /*
-    @Value("\${api.url}")
-    private lateinit var apiUrl: String
-
-    //Declaramos la api key
-    @Value("\${api.key}")
-    private lateinit var apiKey: String
-*/
+ 
+    lateinit var currencyRepository: CurrencyRepository;
+    fun setCurrecyRepository(currencyRepository: CurrencyRepository) {
+        
+        this.currencyRepository = currencyRepository
+    }
+ 
     var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
 
     override fun calculate(): BigDecimal {
@@ -70,11 +55,6 @@ class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
      * @return
      */
     fun convert(requestDto: RequestDto): ResponseDto {
-
-        //private ApplicationContext context;
-        //val repo: CurrencyRepository = context.getBean(CurrencyRepository::class.java)
-
-        //Verificamos que el monto sea mayor a 0
         if (requestDto.amount < (BigDecimal.ZERO)) {
             LOGGER.log(Level.WARNING, "No se puede convertir una cantidad menor a 0")
             throw ServiceException("No se puede convertir una cantidad menor a 0", "bad_amount")
@@ -87,7 +67,8 @@ class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
             val responseDto: ResponseDto = parseResponse(response)
             LOGGER.info("Respuesta de la API: $responseDto")
             //Si es exitoso guardo en bd
-            //currencyRepository.save(Currency(requestDto.from, requestDto.to, requestDto.amount, responseDto.result, Date()))
+            currencyRepository.save(Currency(requestDto.from, requestDto.to, requestDto.amount, responseDto.result, Date()))
+            //servicio.guardar(Currency(requestDto.from, requestDto.to, requestDto.amount, responseDto.result, Date()))
             LOGGER.info("Respuesta guardada en bd correctamente")
             return responseDto
         } else {

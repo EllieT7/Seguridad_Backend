@@ -50,3 +50,6 @@ Authorization: Basic admin admin
 
 ###
 GET http://localhost:8080/api/currency/multiple?q=%5B%7B%22from%22%3A%22bob%22%2C%22to%22%3A%22usd%22%2C%22amount%22%3A100%7D%2C%7B%22from%22%3A%22eur%22%2C%22to%22%3A%22usd%22%2C%22amount%22%3A443%7D%5D
+
+### Total de registros
+GET http://localhost:8080/api/currency/totalRecords

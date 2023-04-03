@@ -25,7 +25,7 @@ keycloak:
   ssl-required: external
   resource: backend
   credentials:
-    secret: bJ0drlN5kdWjBSJLRi6p0bd5xM5Qy7su
+    secret: UlvIpt7xjtebLjZwHon1QnX0SSNLNqls
   use-resource-role-mappings: false
   security-constraints:
     - authRoles:
@@ -36,13 +36,16 @@ keycloak:
             - OPTIONS
           patterns:
             - /api/currency/history
-  # security-constraints[1]:
-    # - authRoles:
-    #     - USER
-    #   security-collections:
-    #     - name: SERVICIOS DEL USUARIO
-    #       omitted-methods: 
-    #         - OPTIONS
-    #       patterns:
-    #         - /api/currency/convert 
+ # security-constraints[1]:
+    - authRoles:
+        - USER
+      security-collections:
+        - name: SERVICIOS DEL USUARIO
+          omitted-methods: 
+            - OPTIONS
+          patterns:
+            - /api/currency/convert
+            - /api/currency/multiple
+    
+
             

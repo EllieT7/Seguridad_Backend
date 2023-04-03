@@ -15,6 +15,7 @@ import javax.persistence.Entity
 
 
 @SpringBootApplication
+//@ComponentScan(basePackages = ["arquitectura.software.demo.dao.repository"])
 //@EntityScan("arquitectura.software.demo.dto")
 //@EnableJpaRepositories("arquitectura.software.demo.dao.repository")
 class CurrencyApiKotlinApplication
@@ -24,21 +25,21 @@ fun main(args: Array<String>) {
 	
 
     // Crear monedas simples
-    val conv1 = SimpleCurrencyConverter(RequestDto("USD", "MXN", BigDecimal(100)))
-    val conv2 = SimpleCurrencyConverter(RequestDto("USD", "BOB", BigDecimal(100)))
-    val conv3 = SimpleCurrencyConverter(RequestDto("USD", "EUR", BigDecimal(100)))
+    // val conv1 = SimpleCurrencyConverter(RequestDto("USD", "MXN", BigDecimal(100)))
+    // val conv2 = SimpleCurrencyConverter(RequestDto("USD", "BOB", BigDecimal(100)))
+    // val conv3 = SimpleCurrencyConverter(RequestDto("USD", "EUR", BigDecimal(100)))
 
-	conv1.calculate()
-	conv2.calculate()
-	conv3.calculate()
+	// conv1.calculate()
+	// conv2.calculate()
+	// conv3.calculate()
 
-	// Crear moneda compuesta
-	val compositeCurrencyConverter = CompositeCurrencyConverter()
-	compositeCurrencyConverter.addCurrencyConverter(conv1)
-	compositeCurrencyConverter.addCurrencyConverter(conv2)
-	compositeCurrencyConverter.addCurrencyConverter(conv3)
+	// // Crear moneda compuesta
+	// val compositeCurrencyConverter = CompositeCurrencyConverter()
+	// compositeCurrencyConverter.addCurrencyConverter(conv1)
+	// compositeCurrencyConverter.addCurrencyConverter(conv2)
+	// compositeCurrencyConverter.addCurrencyConverter(conv3)
 
-	// Convertir
-	// compositeCurrencyConverter.getTotal()
-	println(compositeCurrencyConverter.calculate())
+	// // Convertir
+	// // compositeCurrencyConverter.getTotal()
+	// println(compositeCurrencyConverter.calculate())
 }

@@ -6,6 +6,7 @@ import arquitectura.software.demo.bl.CompositeCurrencyConverter
 import arquitectura.software.demo.dto.RequestDto
 import arquitectura.software.demo.dto.ResponseDto
 import arquitectura.software.demo.dao.Currency
+import arquitectura.software.demo.dao.repository.CurrencyRepository
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestParam
@@ -25,7 +26,7 @@ import MultipleResponseDto
 @RestController
 @RequestMapping("/api/currency")
 
-class CurrencyApi (private val currencyBl: CurrencyBl) {
+class CurrencyApi (private val currencyBl: CurrencyBl, private val currencyRepository: CurrencyRepository) {
 
     /**
      * Endpoint GET para obtener la conversión de una moneda a otra
@@ -39,6 +40,7 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         
         val requestDto = RequestDto(from, to, amount)
         val simpleCurrencyConverter = SimpleCurrencyConverter(requestDto)
+        simpleCurrencyConverter.setCurrecyRepository(currencyRepository)
         //Log procesando solicitud
         LOGGER.log(
             Level.INFO,
@@ -65,6 +67,7 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         
         for (requestDto in requestDtoList) {
             val simpleCurrencyConverter = SimpleCurrencyConverter(requestDto)
+            simpleCurrencyConverter.setCurrecyRepository(currencyRepository)
             compositeCurrencyConverter.addCurrencyConverter(simpleCurrencyConverter)
         }
         var multipleResponseDto = MultipleResponseDto(compositeCurrencyConverter.showEstructure(), compositeCurrencyConverter.calculate())
@@ -115,7 +118,12 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         return currencyBl.history(page, size, filters);
     }
     
-   
+    @GetMapping("/totalRecords")
+    fun totalRecords(): Long {
+        //Log procesando solicitud
+        LOGGER.log(Level.INFO, "Procesando solicitud de total de registros")
+        return currencyBl.totalRecords();
+    }
 
     companion object {
         private val LOGGER = Logger.getLogger(CurrencyApi::class.java.name)
