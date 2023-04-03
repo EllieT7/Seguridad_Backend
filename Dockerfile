@@ -23,9 +23,9 @@ COPY src src
 # RUN yum install maven
 
 # Make the maven wrapper script executalbe (needed when running on Windows)
-RUN chmod +x ./mvnw
+#RUN chmod +x ./mvnw
 # Change the line endint to unix-style (needed when running on Windows)
-RUN dos2unix mvnw
+#RUN dos2unix mvnw
 
 # RUN apk add --no-cache maven
 RUN ./mvnw install -DskipTests
@@ -45,5 +45,8 @@ COPY --from=build ${DEPENDENCY}/BOOT-INF/classes /app
 ENV USERNAME_DB "postgres"   
 ENV PASSWORD "password"
 ENV URL "jdbc:postgresql://localhost:5432/arqui"
+ENV KEYCLOAK_CLIENT "backend"
+ENV KEYCLOAK_KEY "UlvIpt7xjtebLjZwHon1QnX0SSNLNqls"
+ENV KEYCLOAK_URL "http://192.168.0.3:8008/"
 
 ENTRYPOINT ["java","-cp","app:app/lib/*","arquitectura.software.demo.CurrencyApiKotlinApplicationKt"]

@@ -21,7 +21,7 @@ spring:
 # Configuramos springboot con keycloak
 keycloak:
   realm: software
-  auth-server-url: http://localhost:8008
+  auth-server-url: http://192.168.0.3:8008
   ssl-required: external
   resource: backend
   credentials:

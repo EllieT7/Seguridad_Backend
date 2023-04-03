@@ -29,12 +29,18 @@ import kotlinx.coroutines.*
 class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
  
     lateinit var currencyRepository: CurrencyRepository;
-    fun setCurrecyRepository(currencyRepository: CurrencyRepository) {
-        
+    fun setCurrecyRepository(currencyRepository: CurrencyRepository) {  
         this.currencyRepository = currencyRepository
     }
  
     var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
+    //Declaramos la api key
+    @Value("\${api.key}")
+    private val apiKey: String = ""
+    //Declaramos la url de la api
+    @Value("\${api.url}")
+    private val apiUrl: String = ""
+
 
     override fun calculate(): BigDecimal {
         //Llamamos a nuestro Bl
