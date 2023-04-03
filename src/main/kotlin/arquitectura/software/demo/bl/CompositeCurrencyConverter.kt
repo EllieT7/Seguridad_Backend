@@ -28,8 +28,12 @@ class CompositeCurrencyConverter : CurrencyConverter {
         return total
     }
 
-    // fun getTotal(): BigDecimal {
-    //     return total
-    // }
+    override fun showEstructure(): List<ResponseDto> {
+        val listOfResponses = mutableListOf<ResponseDto>()
+        for (currencyConverter in listOfConversions) {
+            listOfResponses.add(currencyConverter.showEstructure().get(0))
+        }
+        return listOfResponses
+    }
 
 }

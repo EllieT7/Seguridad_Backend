@@ -19,6 +19,7 @@ import java.security.Principal
 import java.net.URLDecoder
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import MultipleResponseDto
 
 
 @RestController
@@ -47,7 +48,7 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
     }
 
     @GetMapping("/multiple")
-    fun multiple(@RequestParam q: String): BigDecimal {
+    fun multiple(@RequestParam q: String): MultipleResponseDto {
 
         //Decodificamos
         val decodedJson: String = URLDecoder.decode(q, "UTF-8")
@@ -61,11 +62,13 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         )
         //Añadimos los convertidores simples a un convertidor compuesto
         var compositeCurrencyConverter = CompositeCurrencyConverter()
+        
         for (requestDto in requestDtoList) {
             val simpleCurrencyConverter = SimpleCurrencyConverter(requestDto)
             compositeCurrencyConverter.addCurrencyConverter(simpleCurrencyConverter)
         }
-        return compositeCurrencyConverter.calculate()
+        var multipleResponseDto = MultipleResponseDto(compositeCurrencyConverter.showEstructure(), compositeCurrencyConverter.calculate())
+        return multipleResponseDto
     }
 
 

@@ -10,5 +10,6 @@ interface CurrencyConverter {
     // Una funcion en comun es la de convertir una cantidad de una moneda a otra
     // fun convert(requestDto: RequestDto): ResponseDto
     fun calculate(): BigDecimal
+    fun showEstructure(): List<ResponseDto>
 
 }

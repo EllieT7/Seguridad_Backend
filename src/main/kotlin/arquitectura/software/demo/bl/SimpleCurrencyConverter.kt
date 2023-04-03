@@ -57,6 +57,13 @@ class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
         return convert(requestDto).result;
     }
 
+    override fun showEstructure(): List<ResponseDto> {
+        //Lista del elemento simple
+        val list: MutableList<ResponseDto> = mutableListOf()
+        list.add(convert(requestDto))
+        return list
+    }
+
     /**
      * Método que convierte una moneda a otra
      * @param requestDto
@@ -144,6 +151,7 @@ class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
             throw ServiceException("Error interno, parseo", "internal_error")
         }
     }
+
 
     
 
