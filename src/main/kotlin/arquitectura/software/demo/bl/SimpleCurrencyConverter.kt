@@ -13,42 +13,49 @@ import okhttp3.Request
 import okhttp3.Response
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.beans.factory.annotation.Value
+import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.ApplicationContext
 import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.PropertySource
 import org.springframework.data.repository.CrudRepository
+import org.springframework.stereotype.Component
+import org.springframework.stereotype.Service
 import java.math.BigDecimal
 import java.util.*
 import java.util.logging.Level
 import java.util.logging.Logger
 
 
-// @Component
+
 // @ComponentScan("com")
-@PropertySource("classpath:application.properties")
-class SimpleCurrencyConverter @Autowired constructor(private val requestDto: RequestDto): CurrencyConverter{
-    var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
+//@Component
+class SimpleCurrencyConverter(val requestDto: RequestDto): CurrencyConverter{
+
 
     // var context: ApplicationContext? = AnnotationConfigApplicationContext(Data::class.java)
 
 
-    // @Autowired
-    // var currencyRepository: CurrencyRepository = context?.getBean(CurrencyRepository::class.java)!!;
+   //@Autowired
+   //lateinit var currencyRepository: CurrencyRepository
 
-    //var currencyRepository = getInstanceOfCurrencyRepository()    var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
+     // var currencyRepository: CurrencyRepository = context?.getBean(CurrencyRepository::class.java)!!;
+    //var currencyRepository = getInstanceOfCurrencyRepository()    //var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
     //Declaramos la url de la api
+    /*
     @Value("\${api.url}")
     private lateinit var apiUrl: String
 
     //Declaramos la api key
     @Value("\${api.key}")
     private lateinit var apiKey: String
-    
+*/
+    var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
+
     override fun calculate(): BigDecimal {
+        //Llamamos a nuestro Bl
+        //val currencyBl = CurrencyBl(pagingRepository: PagingRepository , CurrencyRepository: CurrencyRepository)
         return convert(requestDto).result;
     }
-
-    
 
     /**
      * Método que convierte una moneda a otra
@@ -73,7 +80,7 @@ class SimpleCurrencyConverter @Autowired constructor(private val requestDto: Req
             val responseDto: ResponseDto = parseResponse(response)
             LOGGER.info("Respuesta de la API: $responseDto")
             //Si es exitoso guardo en bd
-            currencyRepository.save(Currency(requestDto.from, requestDto.to, requestDto.amount, responseDto.result, Date()))
+            //currencyRepository.save(Currency(requestDto.from, requestDto.to, requestDto.amount, responseDto.result, Date()))
             LOGGER.info("Respuesta guardada en bd correctamente")
             return responseDto
         } else {
@@ -138,13 +145,14 @@ class SimpleCurrencyConverter @Autowired constructor(private val requestDto: Req
         }
     }
 
+    
 
+
+/*
     public fun getInstanceOfCurrencyRepository(): CurrencyRepository {
         val currencyRepository1 = object: CurrencyRepository {
             override fun <S : Currency?> save(entity: S): S {
-                //Mantener el metodo sa
-                //return super.save(entity)
-                return entity!!
+                TODO("Not yet implemented")
             }
 
             override fun <S : Currency?> saveAll(entities: MutableIterable<S>): MutableIterable<S> {
@@ -193,5 +201,5 @@ class SimpleCurrencyConverter @Autowired constructor(private val requestDto: Req
         }
         return currencyRepository1
 
-    }
+    }*/
 }

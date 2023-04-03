@@ -1,5 +1,6 @@
 package arquitectura.software.demo.dto
 
+
 import java.math.BigDecimal
 
 data class RequestDto(

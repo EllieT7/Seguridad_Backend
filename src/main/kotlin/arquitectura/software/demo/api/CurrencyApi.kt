@@ -2,6 +2,7 @@ package arquitectura.software.demo.api
 
 import arquitectura.software.demo.bl.CurrencyBl
 import arquitectura.software.demo.bl.SimpleCurrencyConverter
+import arquitectura.software.demo.bl.CompositeCurrencyConverter
 import arquitectura.software.demo.dto.RequestDto
 import arquitectura.software.demo.dto.ResponseDto
 import arquitectura.software.demo.dao.Currency
@@ -15,6 +16,10 @@ import java.util.logging.Level
 import java.util.logging.Logger
 import java.util.Date
 import java.security.Principal
+import java.net.URLDecoder
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
 
 @RestController
 @RequestMapping("/api/currency")
@@ -40,6 +45,29 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         )
         return simpleCurrencyConverter.convert(requestDto)
     }
+
+    @GetMapping("/multiple")
+    fun multiple(@RequestParam q: String): BigDecimal {
+
+        //Decodificamos
+        val decodedJson: String = URLDecoder.decode(q, "UTF-8")
+        //Convertimos a lista de objetos
+        val listType = object : TypeToken<List<RequestDto>>() {}.type
+        val requestDtoList: List<RequestDto> = Gson().fromJson(decodedJson, listType)
+        //Log procesando solicitud
+        LOGGER.log(
+            Level.INFO,
+            "Procesando solicitud de conversion de moneda: ${requestDtoList}"
+        )
+        //Añadimos los convertidores simples a un convertidor compuesto
+        var compositeCurrencyConverter = CompositeCurrencyConverter()
+        for (requestDto in requestDtoList) {
+            val simpleCurrencyConverter = SimpleCurrencyConverter(requestDto)
+            compositeCurrencyConverter.addCurrencyConverter(simpleCurrencyConverter)
+        }
+        return compositeCurrencyConverter.calculate()
+    }
+
 
     // @GetMapping("/user")
     // @PreAuthorize("hasAuthority('ROLE_USER')")
@@ -82,8 +110,9 @@ class CurrencyApi (private val currencyBl: CurrencyBl) {
         if (amount != null) filters["amount"] = amount
         if (date != null) filters["date"] = date
         return currencyBl.history(page, size, filters);
-    } 
-
+    }
+    
+   
 
     companion object {
         private val LOGGER = Logger.getLogger(CurrencyApi::class.java.name)

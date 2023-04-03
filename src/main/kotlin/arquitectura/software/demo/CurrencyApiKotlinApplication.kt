@@ -7,11 +7,16 @@ import arquitectura.software.demo.bl.SimpleCurrencyConverter
 import arquitectura.software.demo.CurrencyConverter
 import arquitectura.software.demo.dto.RequestDto
 import arquitectura.software.demo.dao.repository.CurrencyRepository
+import org.springframework.boot.autoconfigure.domain.EntityScan
+import org.springframework.context.annotation.ComponentScan
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import java.math.BigDecimal
-
+import javax.persistence.Entity
 
 
 @SpringBootApplication
+//@EntityScan("arquitectura.software.demo.dto")
+//@EnableJpaRepositories("arquitectura.software.demo.dao.repository")
 class CurrencyApiKotlinApplication
 
 fun main(args: Array<String>) {

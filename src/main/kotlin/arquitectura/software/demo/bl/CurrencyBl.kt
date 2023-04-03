@@ -29,6 +29,8 @@ import java.text.SimpleDateFormat
 @Service
 class CurrencyBl @Autowired constructor(private val pagingRepository: PagingRepository) {
     var LOGGER = Logger.getLogger(CurrencyBl::class.java.name)
+    
+    
 
     /**
      * Método que obtiene el historial de conversiones
