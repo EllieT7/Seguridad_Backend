@@ -358,3 +358,669 @@ Caused by: org.hibernate.HibernateException: Access to DialectResolutionInfo can
 2023-04-13 10:22:03,856 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
 2023-04-13 10:22:03,867 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - deregister  status: 200
 2023-04-13 10:22:03,875 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 10:23:17,988 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:23:19,258 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=ad0f1029fad3bb00ca3d8046044fbeaec75bd667, state=null
+2023-04-13 10:23:19,261 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 10:23:19,273 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:23:20,033 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 10:23:20,258 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 197 ms. Found 2 JPA repository interfaces.
+2023-04-13 10:23:20,656 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=c16c6b2a-a50c-32a1-b515-f96a6d3a60d7
+2023-04-13 10:23:21,348 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 9090 (http)
+2023-04-13 10:23:21,362 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9090"]
+2023-04-13 10:23:21,364 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 10:23:21,365 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 10:23:21,529 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 10:23:21,530 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2234 ms
+2023-04-13 10:23:21,676 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:23:21,677 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:23:21,678 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:23:21,857 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 10:23:21,930 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 10:23:22,136 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 10:23:22,458 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 10:23:23,027 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 10:23:23,043 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:23:24,131 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 10:23:25,566 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 10:23:26,007 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 10:23:26,048 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 10:23:26,156 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 10:23:26,165 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 10:23:26,203 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 10:23:26,205 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 10:23:26,205 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 10:23:26,206 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 10:23:26,207 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 10:23:26,208 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 10:23:26,208 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 10:23:26,516 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 10:23:26,521 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 10:23:26,526 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 10:23:26,534 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681395806532 with initial instances count: 2
+2023-04-13 10:23:26,541 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 10:23:26,543 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681395806542, current=UP, previous=STARTING]
+2023-04-13 10:23:26,545 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090: registering service...
+2023-04-13 10:23:26,546 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9090"]
+2023-04-13 10:23:26,589 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 9090 (http) with context path ''
+2023-04-13 10:23:26,591 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 9090
+2023-04-13 10:23:26,610 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - registration status: 204
+2023-04-13 10:23:26,727 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 10.476 seconds (JVM running for 11.247)
+2023-04-13 10:28:26,218 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 10:32:50,076 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 10:32:50,078 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681396370078, current=DOWN, previous=UP]
+2023-04-13 10:32:50,083 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090: registering service...
+2023-04-13 10:32:50,092 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - registration status: 204
+2023-04-13 10:32:50,137 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:32:50,142 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 10:32:53,159 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 10:32:53,170 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - deregister  status: 200
+2023-04-13 10:32:53,183 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 10:33:19,916 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:33:21,139 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=ad0f1029fad3bb00ca3d8046044fbeaec75bd667, state=null
+2023-04-13 10:33:21,141 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 10:33:21,157 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:33:22,215 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 10:33:22,419 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 188 ms. Found 2 JPA repository interfaces.
+2023-04-13 10:33:22,800 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 10:33:23,556 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 9090 (http)
+2023-04-13 10:33:23,576 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-9090"]
+2023-04-13 10:33:23,579 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 10:33:23,580 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 10:33:23,734 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 10:33:23,734 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2551 ms
+2023-04-13 10:33:24,296 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:33:24,297 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:33:24,299 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:33:24,429 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 10:33:24,498 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 10:33:24,740 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 10:33:25,105 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 10:33:25,678 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 10:33:25,691 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:33:26,757 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 10:33:28,575 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 10:33:28,851 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 10:33:28,869 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 10:33:28,951 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 10:33:29,068 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 10:33:29,085 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 10:33:29,134 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 10:33:29,135 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 10:33:29,136 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 10:33:29,137 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 10:33:29,141 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 10:33:29,143 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 10:33:29,149 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 10:33:29,502 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 10:33:29,507 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 10:33:29,512 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 10:33:29,519 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681396409518 with initial instances count: 2
+2023-04-13 10:33:29,525 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 10:33:29,527 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681396409527, current=UP, previous=STARTING]
+2023-04-13 10:33:29,534 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-9090"]
+2023-04-13 10:33:29,534 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090: registering service...
+2023-04-13 10:33:29,567 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 9090 (http) with context path ''
+2023-04-13 10:33:29,568 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 9090
+2023-04-13 10:33:29,592 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - registration status: 204
+2023-04-13 10:33:29,791 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 11.744 seconds (JVM running for 12.316)
+2023-04-13 10:33:39,299 INFO org.apache.juli.logging.DirectJDKLog [http-nio-9090-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 10:33:39,300 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-04-13 10:33:39,306 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-9090-exec-2] Completed initialization in 4 ms
+2023-04-13 10:38:29,165 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 10:43:29,179 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 10:48:29,188 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 10:49:11,345 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 10:49:11,346 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681397351346, current=DOWN, previous=UP]
+2023-04-13 10:49:11,348 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090: registering service...
+2023-04-13 10:49:11,369 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - registration status: 204
+2023-04-13 10:49:11,415 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:49:11,419 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 10:49:14,436 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 10:49:14,447 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:9090 - deregister  status: 200
+2023-04-13 10:49:14,459 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 10:49:41,171 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:49:45,685 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=13eb504253bab60a3459f52bd2ef717c8ebfb836, state=null
+2023-04-13 10:49:45,687 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 10:49:45,699 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:49:46,316 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [arquitectura.software.demo.CurrencyApiKotlinApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+2023-04-13 10:49:46,331 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-13 10:49:46,369 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [arquitectura.software.demo.CurrencyApiKotlinApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at arquitectura.software.demo.CurrencyApiKotlinApplicationKt.main(CurrencyApiKotlinApplication.kt:51)
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225)
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+	... 19 common frames omitted
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.lang.Integer] for value '{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a'; nested exception is java.lang.NumberFormatException: For input string: "{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a"
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:192)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:175)
+	at org.springframework.core.env.AbstractPropertyResolver.convertValueIfNecessary(AbstractPropertyResolver.java:265)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58)
+	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 25 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:999)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.core.convert.support.StringToNumberConverterFactory$StringToNumber.convert(StringToNumberConverterFactory.java:64)
+	at org.springframework.core.convert.support.StringToNumberConverterFactory$StringToNumber.convert(StringToNumberConverterFactory.java:50)
+	at org.springframework.core.convert.support.GenericConversionService$ConverterFactoryAdapter.convert(GenericConversionService.java:437)
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41)
+	... 35 common frames omitted
+2023-04-13 10:51:02,377 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:51:05,155 WARN org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Could not locate PropertySource: None of labels [] found
+2023-04-13 10:51:05,159 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:51:06,249 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 10:51:06,541 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 270 ms. Found 2 JPA repository interfaces.
+2023-04-13 10:51:07,193 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 10:51:08,262 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-04-13 10:51:08,288 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 10:51:08,289 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 10:51:08,291 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 10:51:08,506 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 10:51:08,507 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 3319 ms
+2023-04-13 10:51:09,105 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:51:09,106 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:51:09,107 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:51:09,261 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 10:51:09,380 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 10:51:09,659 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 10:51:10,092 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 10:51:10,751 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 10:51:10,768 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:51:11,820 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 10:51:14,103 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 10:51:14,366 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 10:51:14,385 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 10:51:14,465 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 10:51:14,576 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 10:51:14,584 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 10:51:14,629 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 10:51:14,630 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 10:51:14,631 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 10:51:14,631 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 10:51:14,632 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 10:51:14,634 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 10:51:14,635 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 10:51:15,007 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 10:51:15,012 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 10:51:15,017 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 10:51:15,045 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681397475043 with initial instances count: 1
+2023-04-13 10:51:15,059 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 10:51:15,062 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681397475062, current=UP, previous=STARTING]
+2023-04-13 10:51:15,068 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080: registering service...
+2023-04-13 10:51:15,070 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 10:51:15,139 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - registration status: 204
+2023-04-13 10:51:15,154 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 10:51:15,158 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 8080
+2023-04-13 10:51:15,309 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 15.336 seconds (JVM running for 16.297)
+2023-04-13 10:51:50,780 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 10:51:50,780 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681397510780, current=DOWN, previous=UP]
+2023-04-13 10:51:50,786 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080: registering service...
+2023-04-13 10:51:50,797 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - registration status: 204
+2023-04-13 10:51:50,829 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:51:50,834 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 10:51:53,837 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 10:51:53,853 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - deregister  status: 200
+2023-04-13 10:51:53,871 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 10:52:22,733 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:52:25,131 WARN org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Could not locate PropertySource: None of labels [] found
+2023-04-13 10:52:25,162 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:52:26,219 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 10:52:26,407 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 177 ms. Found 2 JPA repository interfaces.
+2023-04-13 10:52:26,793 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 10:52:27,520 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2023-04-13 10:52:27,538 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2023-04-13 10:52:27,539 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 10:52:27,540 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 10:52:27,695 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 10:52:27,695 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2502 ms
+2023-04-13 10:52:28,229 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:52:28,229 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:52:28,243 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:52:28,390 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 10:52:28,497 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 10:52:28,775 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 10:52:29,083 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 10:52:29,655 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 10:52:29,672 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:52:30,688 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 10:52:32,502 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 10:52:32,727 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 10:52:32,761 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 10:52:32,850 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 10:52:32,977 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 10:52:32,986 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 10:52:33,021 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 10:52:33,022 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 10:52:33,022 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 10:52:33,023 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 10:52:33,024 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 10:52:33,024 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 10:52:33,025 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 10:52:33,352 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 10:52:33,371 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 10:52:33,377 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 10:52:33,388 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681397553387 with initial instances count: 2
+2023-04-13 10:52:33,395 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 10:52:33,396 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681397553396, current=UP, previous=STARTING]
+2023-04-13 10:52:33,401 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080: registering service...
+2023-04-13 10:52:33,405 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2023-04-13 10:52:33,443 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2023-04-13 10:52:33,457 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 8080
+2023-04-13 10:52:33,462 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - registration status: 204
+2023-04-13 10:52:33,652 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 12.687 seconds (JVM running for 13.284)
+2023-04-13 10:55:19,618 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 10:55:19,620 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681397719620, current=DOWN, previous=UP]
+2023-04-13 10:55:19,622 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080: registering service...
+2023-04-13 10:55:19,637 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - registration status: 204
+2023-04-13 10:55:19,667 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:55:19,672 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 10:55:22,677 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 10:55:22,688 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:8080 - deregister  status: 200
+2023-04-13 10:55:22,702 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 10:55:49,609 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:55:51,425 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=6e485225092ddd64de875513a63c2c3d5e9480c5, state=null
+2023-04-13 10:55:51,428 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 10:55:51,439 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:55:52,090 WARN org.springframework.context.support.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [arquitectura.software.demo.CurrencyApiKotlinApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+2023-04-13 10:55:52,106 INFO org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener [main] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-04-13 10:55:52,162 ERROR org.springframework.boot.SpringApplication [main] Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [arquitectura.software.demo.CurrencyApiKotlinApplication]; nested exception is java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:609)
+	at org.springframework.context.annotation.ConfigurationClassParser.access$800(ConfigurationClassParser.java:110)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$1(ConfigurationClassParser.java:812)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:809)
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:780)
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:192)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:331)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:247)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:311)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:112)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:746)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:564)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
+	at arquitectura.software.demo.CurrencyApiKotlinApplicationKt.main(CurrencyApiKotlinApplication.kt:51)
+Caused by: java.lang.IllegalStateException: Error processing condition on org.springframework.boot.actuate.autoconfigure.web.server.ManagementContextAutoConfiguration$DifferentManagementContextConfiguration
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:60)
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:225)
+	at org.springframework.context.annotation.ConfigurationClassParser.processMemberClasses(ConfigurationClassParser.java:371)
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:271)
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:249)
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:599)
+	... 19 common frames omitted
+Caused by: org.springframework.core.convert.ConversionFailedException: Failed to convert from type [java.lang.String] to type [java.lang.Integer] for value '{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a'; nested exception is java.lang.NumberFormatException: For input string: "{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a"
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:47)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:192)
+	at org.springframework.core.convert.support.GenericConversionService.convert(GenericConversionService.java:175)
+	at org.springframework.core.env.AbstractPropertyResolver.convertValueIfNecessary(AbstractPropertyResolver.java:265)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:81)
+	at org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertyResolver.getProperty(ConfigurationPropertySourcesPropertyResolver.java:65)
+	at org.springframework.core.env.AbstractEnvironment.getProperty(AbstractEnvironment.java:605)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.getPortProperty(ManagementPortType.java:64)
+	at org.springframework.boot.actuate.autoconfigure.web.server.ManagementPortType.get(ManagementPortType.java:58)
+	at org.springframework.boot.actuate.autoconfigure.web.server.OnManagementPortCondition.getMatchOutcome(OnManagementPortCondition.java:49)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47)
+	... 25 common frames omitted
+Caused by: java.lang.NumberFormatException: For input string: "{cypher}b97a22b328a740dea2864dc2913dbcfa787bc426cb8f9d0cd8389e1b3540f90a"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:999)
+	at org.springframework.util.NumberUtils.parseNumber(NumberUtils.java:211)
+	at org.springframework.core.convert.support.StringToNumberConverterFactory$StringToNumber.convert(StringToNumberConverterFactory.java:64)
+	at org.springframework.core.convert.support.StringToNumberConverterFactory$StringToNumber.convert(StringToNumberConverterFactory.java:50)
+	at org.springframework.core.convert.support.GenericConversionService$ConverterFactoryAdapter.convert(GenericConversionService.java:437)
+	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41)
+	... 35 common frames omitted
+2023-04-13 10:57:00,968 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 10:57:02,651 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=47c9f1e6538f1737a5483ef7dd94df45539cfeae, state=null
+2023-04-13 10:57:02,653 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 10:57:02,664 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 10:57:03,775 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 10:57:03,984 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 188 ms. Found 2 JPA repository interfaces.
+2023-04-13 10:57:04,390 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 10:57:05,111 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 7777 (http)
+2023-04-13 10:57:05,126 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-7777"]
+2023-04-13 10:57:05,127 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 10:57:05,129 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 10:57:05,294 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 10:57:05,295 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2598 ms
+2023-04-13 10:57:05,774 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:57:05,775 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:57:05,776 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 10:57:05,914 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 10:57:05,984 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 10:57:06,191 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 10:57:06,518 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 10:57:07,083 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 10:57:07,098 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 10:57:08,076 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 10:57:10,089 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 10:57:10,301 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 10:57:10,318 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 10:57:10,391 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 10:57:10,500 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 10:57:10,508 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 10:57:10,542 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 10:57:10,544 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 10:57:10,546 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 10:57:10,547 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 10:57:10,548 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 10:57:10,549 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 10:57:10,549 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 10:57:10,889 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 10:57:10,894 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 10:57:10,898 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 10:57:10,906 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681397830905 with initial instances count: 2
+2023-04-13 10:57:10,913 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 10:57:10,917 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681397830917, current=UP, previous=STARTING]
+2023-04-13 10:57:10,920 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 10:57:10,921 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-7777"]
+2023-04-13 10:57:10,956 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 7777 (http) with context path ''
+2023-04-13 10:57:10,958 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 7777
+2023-04-13 10:57:10,972 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 10:57:11,104 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 11.844 seconds (JVM running for 12.641)
+2023-04-13 11:02:10,558 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 11:07:10,575 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 11:07:39,308 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 11:07:39,309 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681398459309, current=DOWN, previous=UP]
+2023-04-13 11:07:39,310 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:07:39,317 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:07:39,348 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:07:39,352 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 11:07:42,368 WARN com.netflix.discovery.TimedSupervisorTask [DiscoveryClient-1] task supervisor shutting down, can't accept the task
+2023-04-13 11:07:42,371 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 11:07:42,379 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - deregister  status: 200
+2023-04-13 11:07:42,392 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 11:08:13,997 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 11:08:17,684 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=47c9f1e6538f1737a5483ef7dd94df45539cfeae, state=null
+2023-04-13 11:08:17,690 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 11:08:17,704 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 11:08:19,003 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 11:08:19,204 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 186 ms. Found 2 JPA repository interfaces.
+2023-04-13 11:08:19,611 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 11:08:20,464 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 7777 (http)
+2023-04-13 11:08:20,481 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:08:20,482 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 11:08:20,482 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 11:08:20,634 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 11:08:20,635 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2872 ms
+2023-04-13 11:08:21,114 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:08:21,115 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:08:21,117 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:08:21,239 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 11:08:21,306 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 11:08:21,512 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 11:08:21,831 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 11:08:22,408 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 11:08:22,426 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:08:23,641 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 11:08:25,497 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 11:08:25,733 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 11:08:25,754 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 11:08:25,831 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 11:08:25,928 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 11:08:25,938 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 11:08:25,976 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 11:08:25,977 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 11:08:25,978 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 11:08:25,979 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 11:08:25,979 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 11:08:25,980 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 11:08:25,981 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 11:08:26,292 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 11:08:26,296 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 11:08:26,300 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 11:08:26,310 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681398506308 with initial instances count: 2
+2023-04-13 11:08:26,316 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 11:08:26,320 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681398506320, current=UP, previous=STARTING]
+2023-04-13 11:08:26,326 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:08:26,327 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:08:26,372 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 7777 (http) with context path ''
+2023-04-13 11:08:26,374 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 7777
+2023-04-13 11:08:26,395 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:08:26,529 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 14.59 seconds (JVM running for 15.206)
+2023-04-13 11:13:25,994 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 11:18:26,006 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 11:19:28,307 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 11:19:28,316 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681399168316, current=DOWN, previous=UP]
+2023-04-13 11:19:28,319 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:19:28,338 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:19:28,553 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:19:28,573 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 11:19:31,621 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 11:19:31,812 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - deregister  status: 200
+2023-04-13 11:19:31,828 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 11:23:29,353 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 11:23:32,686 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=47c9f1e6538f1737a5483ef7dd94df45539cfeae, state=null
+2023-04-13 11:23:32,709 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 11:23:32,725 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 11:23:37,727 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 11:23:38,354 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 587 ms. Found 2 JPA repository interfaces.
+2023-04-13 11:23:40,562 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 11:23:44,928 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 7777 (http)
+2023-04-13 11:23:44,961 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:23:44,963 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 11:23:44,985 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 11:23:46,678 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 11:23:46,679 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 13898 ms
+2023-04-13 11:23:48,672 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:23:48,682 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:23:48,694 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:23:49,213 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 11:23:49,626 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 11:23:50,640 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 11:23:52,302 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 11:23:57,281 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 11:23:57,298 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:24:02,995 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 11:24:13,272 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 11:24:14,510 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 11:24:14,563 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 11:24:14,799 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 11:24:15,357 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 11:24:15,387 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 11:24:15,519 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 11:24:15,520 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 11:24:15,522 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 11:24:15,524 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 11:24:15,526 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 11:24:15,560 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 11:24:15,564 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 11:24:16,791 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 11:24:16,804 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 11:24:16,960 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 11:24:17,073 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681399457066 with initial instances count: 2
+2023-04-13 11:24:17,089 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 11:24:17,099 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681399457099, current=UP, previous=STARTING]
+2023-04-13 11:24:17,121 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:24:17,216 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:24:17,310 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 7777 (http) with context path ''
+2023-04-13 11:24:17,401 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 7777
+2023-04-13 11:24:17,616 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:24:18,265 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 60.779 seconds (JVM running for 62.306)
+2023-04-13 11:29:15,627 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2023-04-13 11:33:37,319 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 11:33:37,322 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681400017322, current=DOWN, previous=UP]
+2023-04-13 11:33:37,323 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:33:37,343 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:33:37,400 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:33:37,404 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 11:33:40,422 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 11:33:40,434 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - deregister  status: 200
+2023-04-13 11:33:40,449 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient
+2023-04-13 11:34:25,738 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8888
+2023-04-13 11:34:27,780 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=currency-converter, profiles=[test], label=null, version=111645b65d765dbcf7cbcbbddcedc1457fdb236c, state=null
+2023-04-13 11:34:27,783 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter-test.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/currency-converter.yml'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/EllieT7/server-config.git/application.yml'}]
+2023-04-13 11:34:27,794 INFO org.springframework.boot.SpringApplication [main] The following 1 profile is active: "test"
+2023-04-13 11:34:29,107 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-04-13 11:34:29,337 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 207 ms. Found 2 JPA repository interfaces.
+2023-04-13 11:34:29,725 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=49aade1e-c66c-3fcb-921d-ba07949c3968
+2023-04-13 11:34:30,569 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 7777 (http)
+2023-04-13 11:34:30,587 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:34:30,588 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2023-04-13 11:34:30,589 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-04-13 11:34:30,791 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2023-04-13 11:34:30,792 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2970 ms
+2023-04-13 11:34:31,397 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/convert] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:34:31,398 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/history] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:34:31,399 ERROR org.apache.juli.logging.DirectJDKLog [main] For security constraints with URL pattern [/api/currency/multiple] the HTTP methods [OPTIONS] are uncovered.
+2023-04-13 11:34:31,546 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-04-13 11:34:31,646 INFO org.hibernate.Version [main] HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-04-13 11:34:31,926 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-04-13 11:34:32,324 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-04-13 11:34:32,979 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-04-13 11:34:32,993 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:34:34,378 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-04-13 11:34:36,458 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses RestTemplate.
+2023-04-13 11:34:36,744 WARN org.springframework.cloud.loadbalancer.config.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger [main] Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2023-04-13 11:34:36,760 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [main] Exposing 16 endpoint(s) beneath base path '/actuator'
+2023-04-13 11:34:36,843 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2023-04-13 11:34:36,944 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2023-04-13 11:34:36,954 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2023-04-13 11:34:37,000 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2023-04-13 11:34:37,001 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2023-04-13 11:34:37,002 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2023-04-13 11:34:37,003 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2023-04-13 11:34:37,004 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2023-04-13 11:34:37,005 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2023-04-13 11:34:37,006 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2023-04-13 11:34:37,513 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2023-04-13 11:34:37,517 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2023-04-13 11:34:37,522 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2023-04-13 11:34:37,530 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1681400077529 with initial instances count: 2
+2023-04-13 11:34:37,537 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application CURRENCY-CONVERTER with eureka with status UP
+2023-04-13 11:34:37,540 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1681400077540, current=UP, previous=STARTING]
+2023-04-13 11:34:37,544 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:34:37,545 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-7777"]
+2023-04-13 11:34:37,580 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 7777 (http) with context path ''
+2023-04-13 11:34:37,582 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 7777
+2023-04-13 11:34:37,609 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:34:37,736 INFO org.springframework.boot.StartupInfoLogger [main] Started CurrencyApiKotlinApplicationKt in 14.439 seconds (JVM running for 15.103)
+2023-04-13 11:35:17,166 WARN org.keycloak.adapters.KeycloakDeployment [http-nio-7777-exec-1] Failed to load URLs from http://192.168.0.3:8008/realms/software/.well-known/openid-configuration
+org.apache.http.conn.HttpHostConnectException: Connect to 192.168.0.3:8008 [/192.168.0.3] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:108)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.keycloak.adapters.KeycloakDeployment.getOidcConfiguration(KeycloakDeployment.java:230)
+	at org.keycloak.adapters.KeycloakDeployment.resolveUrls(KeycloakDeployment.java:182)
+	at org.keycloak.adapters.KeycloakDeployment.getAuthUrl(KeycloakDeployment.java:251)
+	at org.keycloak.adapters.OAuthRequestAuthenticator.getRedirectUri(OAuthRequestAuthenticator.java:175)
+	at org.keycloak.adapters.OAuthRequestAuthenticator.loginRedirect(OAuthRequestAuthenticator.java:213)
+	at org.keycloak.adapters.OAuthRequestAuthenticator.authenticate(OAuthRequestAuthenticator.java:275)
+	at org.keycloak.adapters.RequestAuthenticator.authenticate(RequestAuthenticator.java:138)
+	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.authenticateInternal(AbstractKeycloakAuthenticatorValve.java:203)
+	at org.keycloak.adapters.tomcat.KeycloakAuthenticatorValve.authenticate(KeycloakAuthenticatorValve.java:50)
+	at org.keycloak.adapters.tomcat.KeycloakAuthenticatorValve.doAuthenticate(KeycloakAuthenticatorValve.java:57)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:625)
+	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.invoke(AbstractKeycloakAuthenticatorValve.java:181)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Net.java:579)
+	at java.base/sun.nio.ch.Net.connect(Net.java:568)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:588)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:639)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 35 common frames omitted
+2023-04-13 11:35:17,174 ERROR org.apache.juli.logging.DirectJDKLog [http-nio-7777-exec-1] Exception Processing /api/currency/convert
+java.lang.NullPointerException: Cannot invoke "org.keycloak.common.util.KeycloakUriBuilder.clone()" because the return value of "org.keycloak.adapters.KeycloakDeployment.getAuthUrl()" is null
+	at org.keycloak.adapters.OAuthRequestAuthenticator.getRedirectUri(OAuthRequestAuthenticator.java:175)
+	at org.keycloak.adapters.OAuthRequestAuthenticator.loginRedirect(OAuthRequestAuthenticator.java:213)
+	at org.keycloak.adapters.OAuthRequestAuthenticator.authenticate(OAuthRequestAuthenticator.java:275)
+	at org.keycloak.adapters.RequestAuthenticator.authenticate(RequestAuthenticator.java:138)
+	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.authenticateInternal(AbstractKeycloakAuthenticatorValve.java:203)
+	at org.keycloak.adapters.tomcat.KeycloakAuthenticatorValve.authenticate(KeycloakAuthenticatorValve.java:50)
+	at org.keycloak.adapters.tomcat.KeycloakAuthenticatorValve.doAuthenticate(KeycloakAuthenticatorValve.java:57)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:625)
+	at org.keycloak.adapters.tomcat.AbstractKeycloakAuthenticatorValve.invoke(AbstractKeycloakAuthenticatorValve.java:181)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-04-13 11:35:17,188 INFO org.apache.juli.logging.DirectJDKLog [http-nio-7777-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-04-13 11:35:17,189 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-7777-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-04-13 11:35:17,192 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-7777-exec-1] Completed initialization in 2 ms
+2023-04-13 11:36:18,282 INFO arquitectura.software.demo.api.CurrencyApi [http-nio-7777-exec-2] Procesando solicitud de total de registros
+2023-04-13 11:36:24,056 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringApplicationShutdownHook] Unregistering application CURRENCY-CONVERTER with eureka with status DOWN
+2023-04-13 11:36:24,057 INFO com.netflix.discovery.DiscoveryClient$3 [SpringApplicationShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1681400184057, current=DOWN, previous=UP]
+2023-04-13 11:36:24,059 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777: registering service...
+2023-04-13 11:36:24,076 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - registration status: 204
+2023-04-13 11:36:24,096 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-04-13 11:36:24,102 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Shutting down DiscoveryClient ...
+2023-04-13 11:36:27,109 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Unregistering ...
+2023-04-13 11:36:27,125 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] DiscoveryClient_CURRENCY-CONVERTER/host.docker.internal:currency-converter:7777 - deregister  status: 200
+2023-04-13 11:36:27,132 INFO com.netflix.discovery.DiscoveryClient [SpringApplicationShutdownHook] Completed shut down of DiscoveryClient

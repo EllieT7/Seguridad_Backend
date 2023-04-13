@@ -18,6 +18,11 @@ spring:
   application:
     name: currency-converter
 
+# Configuramos el cliente de la api de currency
+currency:
+  url: https://api.apilayer.com/exchangerates_data/convert
+  api_key: DKtvGE5j3a4vFH9qUICssZzdVdKJIla9
+
 # Configuramos springboot con keycloak
 keycloak:
   realm: software
@@ -47,5 +52,9 @@ keycloak:
             - /api/currency/convert
             - /api/currency/multiple
     
-
-            
+# Para que todos los endpoints se habiliten
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
