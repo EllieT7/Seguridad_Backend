@@ -47,6 +47,6 @@ ENV PASSWORD "password"
 ENV URL "jdbc:postgresql://localhost:5432/arqui"
 ENV KEYCLOAK_CLIENT "backend"
 ENV KEYCLOAK_KEY "UlvIpt7xjtebLjZwHon1QnX0SSNLNqls"
-ENV KEYCLOAK_URL "http://192.168.0.3:8008/"
+ENV KEYCLOAK_URL "http://192.168.43.106/"
 
 ENTRYPOINT ["java","-cp","app:app/lib/*","arquitectura.software.demo.CurrencyApiKotlinApplicationKt"]

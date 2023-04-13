@@ -12,9 +12,13 @@ import org.springframework.context.annotation.ComponentScan
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import java.math.BigDecimal
 import javax.persistence.Entity
+import org.springframework.context.annotation.Configuration
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient
 
 
 @SpringBootApplication
+@EnableDiscoveryClient
+@Configuration
 //@ComponentScan(basePackages = ["arquitectura.software.demo.dao.repository"])
 //@EntityScan("arquitectura.software.demo.dto")
 //@EnableJpaRepositories("arquitectura.software.demo.dao.repository")
