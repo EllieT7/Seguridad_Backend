@@ -27,25 +27,25 @@ keycloak:
   credentials:
     secret: UlvIpt7xjtebLjZwHon1QnX0SSNLNqls
   use-resource-role-mappings: false
-#   security-constraints:
-#     - authRoles:
-#         - ADMIN
-#       security-collections:
-#         - name: SERVICIOS DEL ADMINISTRADOR
-#           omitted-methods: 
-#             - OPTIONS
-#           patterns:
-#             - /api/currency/history
-#  # security-constraints[1]:
-#     - authRoles:
-#         - USER
-#       security-collections:
-#         - name: SERVICIOS DEL USUARIO
-#           omitted-methods: 
-#             - OPTIONS
-#           patterns:
-#             - /api/currency/convert
-#             - /api/currency/multiple
+  security-constraints:
+    - authRoles:
+        - ADMIN
+      security-collections:
+        - name: SERVICIOS DEL ADMINISTRADOR
+          omitted-methods: 
+            - OPTIONS
+          patterns:
+            - /api/currency/history
+ # security-constraints[1]:
+    - authRoles:
+        - USER
+      security-collections:
+        - name: SERVICIOS DEL USUARIO
+          omitted-methods: 
+            - OPTIONS
+          patterns:
+            - /api/currency/convert
+            - /api/currency/multiple
     
 
             
